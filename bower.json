@@ -1,0 +1,25 @@
+{
+  "name": "mango",
+  "version": "0.0.1",
+  "authors": [
+    "Joe Hansen <jhansen@pioneernewsgroup.com>"
+  ],
+  "description": "Newspaper Production Management",
+  "license": "Proprietary",
+  "homepage": "www.pioneernewsgroup.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-modal": "~2.2.6",
+    "jquery": "~2.1.4",
+    "jQuery-contextMenu": "~1.8.1",
+    "qTip2": "~2.2.1",
+    "twitter-bootstrap-wizard": "~1.0.0"
+  }
+}
