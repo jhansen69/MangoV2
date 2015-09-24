@@ -46,6 +46,12 @@ class ViewComposerServiceProvider extends ServiceProvider
             }
             $view->with('user',$auth->user())->with('breadcrumb',$breadcrumb)->with('menupath',$menuPath)->with('siteList',$allSites);
         });
+
+        view()->composer('modals.pressJob', function($view) use ($auth, $request)
+        {
+            $presses=\App\Press::where('site_id',session('site'))->get();
+            $view->with('presses',$presses);
+        });
     }
 
     /**

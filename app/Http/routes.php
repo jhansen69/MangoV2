@@ -35,6 +35,17 @@ Route::group(['middleware' =>['auth','acl']], function(){
         Route::resource('sites','SitesController');
     });
 
+    Route::post('/pressjobs/{id}/basic','JobsController@basic');
+    Route::post('/pressjobs/{id}/paper','JobsController@paper');
+    Route::post('/pressjobs/{id}/draw','JobsController@draw');
+    Route::post('/pressjobs/{id}/sections','JobsController@sections');
+    Route::post('/pressjobs/{id}/layout','JobsController@layout');
+    Route::post('/pressjobs/{id}/color','JobsController@color');
+    Route::post('/pressjobs/{id}/bindery','JobsController@bindery');
+    Route::post('/pressjobs/{id}/delivery','JobsController@delivery');
+    Route::post('/pressjobs/{id}/stats','JobsController@stats');
+    Route::post('/pressjobs/{id}/notes','JobsController@notes');
+    Route::post('/pressjobs/{id}/duplicate','JobsController@duplicate');
 
     Route::group(['prefix'=>'press'], function(){
         Route::get('calendar','CalendarController@press');

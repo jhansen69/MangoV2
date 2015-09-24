@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PubsSeeder::class);
         $this->call(PressRunsSeeder::class);
         $this->call(JobsSeeder::class);
+        $this->call(PressSeeder::class);
 
         Model::reguard();
     }
